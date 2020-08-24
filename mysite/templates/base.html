@@ -1,0 +1,160 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/barfiller.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+        <style>
+            #nav-bar{
+                background-color: black;
+            }
+        </style>
+
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body style="background-color: black;">
+        <div class="container-fluid" id="nav-bar" style="z-index: 2000;">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!--div class="logo"-->
+                        <a class="navbar-brand" href="./index.html">
+                            <img src="{% static 'img/logo.png' %}" alt="">
+                        </a>
+                    <!---/div-->
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li class="active"><a href="../index">Home</a></li>
+                            <li><a href="../about">About Us</a></li>
+                            <li><a href="../team">Our Team</a></li>
+                            <li><a href="#">Subsystems</a>
+                                <ul class="dropdown">
+                                    <li><a href="/aerodynamics">Aerodynamics</a></li>
+                                    <li><a href="/vehicledynamics">Vehicle Dynamics</a></li>
+                                    <li><a href="/powertrain">Powertrain</a></li>
+                                    <li><a href="/electronics">Electronics</a></li>
+                                    <li><a href="/media">Media</a></li>
+                                    <li><a href="/marketing">Marketing</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./gallery">Gallery</a></li>
+                            <li><a href="./contact">Contact</a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+
+                        <div class="to-social">
+                            <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i
+                                    class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+
+        <div id="center-banner" style="z-index:-2000;">
+            <div class="owl-carousel">
+                {% for banner in banners_list%}
+                    <div class="banner-img" id="banner-{{forloop.counter}}" style="width:100vw;">
+                        <img src="{{ banner.bg_img.url }}" style="width:100vw; height:100%;">
+                        <div id="text" style="position: relative; top: -100vh; right: 30%; color:white;">
+                            <span style="color:white;">{{ banner.small_text }}</span>
+                            <h1 style="color:white;">{{ banner.large_text }}</h1>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        {% block body %}
+        {% endblock %}
+
+        <!-- Get In Touch Section Begin -->
+<section class="footer-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="fs-about">
+                    <div class="logo">
+                        <a href="../">
+                            <img src="{% static 'img/logo.png' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="gt-text">
+                    <i class="fa fa-map-marker"></i>
+                    <p>National Institute of Technology<br> NH 66, Srinivasnagar, Surathkal<br> Mangalore
+                        Karnataka <br>
+                        575025</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="gt-text">
+                    <i class="fa fa-mobile"></i>
+                    <ul>
+                        <li>7259159980</li>
+                        <li>9113514266</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="gt-text email">
+                    <i class="fa fa-envelope"></i>
+                    <p>captain.nitkracing@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center">
+            <div class="copyright-text">
+                <p>Developed and maintained by <strong>Addhyan Malhotra</strong> & <strong>Harshal
+                    Shende</strong></p>
+            </div>
+            </div>
+        </div>
+    </section>
+    </body>
+
+    <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.barfiller.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                autoWidth:true,
+                items:1
+            });
+        });
+    </script>
+</html>
