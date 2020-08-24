@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 from .bobz import *
+import django_heroku
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
@@ -49,7 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 'google_analytics'
     'mysite',
-    'nitkracing_ev'
+    'nitkracing_ev',
+    'django_user_agents',
 ]
 
 MIDDLEWARE = [

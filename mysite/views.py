@@ -22,7 +22,7 @@ def index(request):
                'image_gallery_short': image_gallery_short,
                'document_list': document_list
                }
-    return render(request, 'index.html', context=context)
+    return render(request, 'index_v1.html', context=context)
 
 
 def about(request):
@@ -54,7 +54,7 @@ def about(request):
                'sponsors_list': sponsors_list,
                'document_list': document_list
                }
-    return render(request, 'about.html', context=context)
+    return render(request, 'about_v1.html', context=context)
 
 
 def contact(request):
@@ -111,7 +111,7 @@ def aerodynamics(request):
                'sponsors_list': sponsors_list,
                'document_list': document_list
                }
-    return render(request, 'aerodynamics.html', context=context)
+    return render(request, 'aerodynamics_v1.html', context=context)
 
 
 def vehicledynamics(request):
