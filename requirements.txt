@@ -59,7 +59,7 @@ MarkupPy==1.14
 MarkupSafe==1.1.1
 mccabe==0.6.1
 mock==4.0.2
-mws==1.0.0.dev12
+mws==0.7.3
 mysql-connector-python==8.0.20
 odfpy==1.4.1
 openpyxl==3.0.4
@@ -71,7 +71,6 @@ Pillow==7.2.0
 Protego==0.1.16
 protobuf==3.12.0
 psycopg2==2.8.5
-py-shiprocket==0.1.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.20
