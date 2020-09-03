@@ -34,9 +34,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'l4utq!%_tyacmct=^-89ww5o9go=wt#caqvjo&87p7@x0eid^j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '10.14.0.14', 'nitkracing.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '10.14.0.14', 'nitkracing.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -129,6 +129,13 @@ USE_TZ = True
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR,  'staticfiles'),
+    os.path.join(BASE_DIR,  'nitkracing_ev/static'),
+    # Add to this list all the locations containing your static files 
+)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
