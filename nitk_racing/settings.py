@@ -36,7 +36,7 @@ SECRET_KEY = 'l4utq!%_tyacmct=^-89ww5o9go=wt#caqvjo&87p7@x0eid^j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '10.14.0.14']
+ALLOWED_HOSTS = ['localhost', '10.14.0.14', 'nitkracing.herokuapp.com']
 
 # Application definition
 
