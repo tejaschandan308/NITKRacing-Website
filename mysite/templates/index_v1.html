@@ -2,71 +2,9 @@
 {% load static %}
 
 {% block body %}
-<section class="choseus-section spad">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="section-title">
-                <span class="fade">What's under the hood?</span>
-                <h2 class="fade">OUR SUBSYSTEMS</h2>
-                <br><br>
-            </div>
-        </div>
-    </div>
-    <nav class="nav-menu">
-        <div class="row">
-            <div class="col-md-2 col-sm-2 col-xs-2">
-                <div class=" fade cs-item">
-                    <a href="./aerodynamics">
-                        <img src="{% static 'img/AD.png' %}" alt="" height="150" width="150"> </a>
-                    <ul>
-                        <li><a href="./aerodynamics">AERODYNAMICS</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-2">
-                <div class="fade cs-item">
-                    <a href="./vehicledynamics">
-                        <img src="{% static 'img/VD.png' %}" alt="" height="150" width="150"></a>
-                    <ul>
-                        <li><a href="../vehicledynamics">VEHICLE DYNAMICS</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-2">
-                <div class="fade cs-item"><a href="./powertrain">
-                    <img src="{% static 'img/PT.png' %}" alt="" height="150" width="150"></a>
-                    <ul>
-                        <li><a href="./powertrain">POWERTRAIN</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="fade col-md-2 col-sm-2 col-xs-2">
-                <div class="cs-item"><a href="./electronics">
-                    <img src="{% static 'img/EL.png' %}" alt="" height="150" width="150"></a>
-                    <ul>
-                        <li><a href="./electronics">ELECTRONICS</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="fade col-md-2 col-sm-2 col-xs-2">
-                <div class="cs-item"><a href="./media">
-                    <img src="{% static 'img/Media.png' %}" alt="" height="150" width="150"></a>
-                    <ul>
-                        <li><a href="./media">MEDIA</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-2">
-                <div class="fade cs-item"><a href="./marketing">
-                    <img src="{% static 'img/Marketing.png' %}" alt="" height="150" width="150"></a>
-                    <ul>
-                        <li><a href="./marketing">MARKETING</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-</section>
+
+{% include 'our_subsystems.html' %}
+
 <section class="gallery-section">
     <div class="section-title">
         <span>A glimpse under the hood</span>
@@ -79,7 +17,7 @@
         {% for document in document_list %}
 
             <model-viewer class="gs-item grid-wide" src="{{ document.document.url }}" alt="{{ document.description }} "
-                          auto-rotate camera-controls>
+                        auto-rotate camera-controls>
             </model-viewer>
 
         {% endfor %}
@@ -124,7 +62,7 @@
             <div class="col-lg-12">
                 <div class="section-title fade">
                     <span>THE SUPPORT SQUAD</span>
-                    <h2>OUR SPONSORS</h2>
+                    <h2>SEASON 2020 SPONSORS</h2>
                     <a href="../contact" class="primary-btn btn-normal appoinment-btn">SPONSOR US</a>
                 </div>
             </div>
