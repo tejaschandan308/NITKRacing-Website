@@ -31,3 +31,12 @@
 </div>
 
 {% endblock %}
+
+{% block script %}
+
+    <script>
+        var selected_item = document.getElementById('nav-bar-gallery');
+        selected_item.classList.add('active');
+    </script>
+
+{% endblock %}

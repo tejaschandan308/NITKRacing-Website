@@ -19,7 +19,7 @@
             <div class="col-md-2 col-sm-2 col-xs-2">
                 <div class="cs-item">
                     <a href="../aerodynamics">
-                        <img src="{% static 'img/AD.png' %}" alt="" height="150" width="150"> </a>
+                        <img src="{% static 'img/AED.png' %}" alt="" height="150" width="150"> </a>
                     <ul>
                         <li><a href="../aerodynamics">AERODYNAMICS</a></li>
                     </ul>
@@ -103,4 +103,13 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block script %}
+
+    <script>
+        var selected_item = document.getElementById('nav-bar-team');
+        selected_item.classList.add('active');
+    </script>
+
 {% endblock %}

@@ -127,12 +127,11 @@
             <div class="ps_slider owl-carousel">
                 {% for document in document_list %}
                     <div class="col-lg-14 text-center">
-                            <div class="ti_pic"><a href="{{ document.link }}">
-                                <img src="{{ document.cover.url }}" alt=""></a>
-                            </div>
-                            <div class="ti_text"><h5>{{ document.edition }}</h5></div>
-
-                </div>
+                        <div class="ti_pic"><a href="{{ document.link }}">
+                            <img src="{{ document.cover.url }}" alt=""></a>
+                        </div>
+                        <div class="ti_text"><h5>{{ document.edition }}</h5></div>
+                    </div>
             {% endfor %}
         </div>
 
@@ -140,4 +139,13 @@
     </div>
     </div>
 </section>
+{% endblock %}
+
+{% block script %}
+
+    <script>
+        var selected_item = document.getElementById('nav-bar-about');
+        selected_item.classList.add('active');
+    </script>
+
 {% endblock %}

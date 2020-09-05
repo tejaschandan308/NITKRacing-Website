@@ -30,6 +30,9 @@
                 z-index: auto;
                 color: blue;
             }
+            #nav-bar-subsystem{
+                z-index:2000;
+            }
         </style>
 
         {% block head %}
@@ -48,10 +51,10 @@
                 <div class="col-lg-6">
                     <nav class="nav-menu">
                         <ul>
-                            <li class="active"><a href="../index">Home</a></li>
-                            <li><a href="../about">About Us</a></li>
-                            <li><a href="../team">Our Team</a></li>
-                            <li><a href="#">Subsystems</a>
+                            <li id="nav-bar-home"><a href="../index">Home</a></li>
+                            <li id="nav-bar-about"><a href="../about">About Us</a></li>
+                            <li id="nav-bar-team"><a href="../team">Our Team</a></li>
+                            <li id="nav-bar-subsystem"><a href="#">Subsystems</a>
                                 <ul class="dropdown">
                                     <li><a href="/aerodynamics">Aerodynamics</a></li>
                                     <li><a href="/electronics">Electronics</a></li>
@@ -61,8 +64,8 @@
                                     <li><a href="/media">Media</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./gallery">Gallery</a></li>
-                            <li><a href="./contact">Contact</a></li>
+                            <li id="nav-bar-gallery"><a href="./gallery">Gallery</a></li>
+                            <li id="nav-bar-contact"><a href="./contact">Contact</a></li>
                             <li><a href="{% url 'nitkracing_ev:index' %}">EV Team</a></li>
                         </ul>
 
@@ -182,4 +185,7 @@
         });
 
     </script>
+    {% block script %}
+    {% endblock %}
+
 </html>

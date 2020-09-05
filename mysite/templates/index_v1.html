@@ -83,3 +83,12 @@
     </div>
 </section>
 {% endblock %}
+
+{% block script %}
+
+    <script>
+        var selected_item = document.getElementById('nav-bar-home');
+        selected_item.classList.add('active');
+    </script>
+
+{% endblock %}

@@ -173,3 +173,12 @@
 </section>
 
 {% endblock %}
+
+{% block script %}
+
+    <script>
+        var selected_item = document.getElementById('nav-bar-subsystem');
+        selected_item.classList.add('active');
+    </script>
+
+{% endblock %}
