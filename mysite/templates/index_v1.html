@@ -1,6 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}
+
+<style>
+
+    .class-item .ci-pic-class img {
+        min-width: 100%;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        -webkit-transition: 2s ease-in-out;
+        transition: 2s ease-in-out;
+    }
+
+    .class-item .ci-pic-class:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+</style>
+
+{% endblock %}
+
 {% block body %}
 
 {% include 'our_subsystems.html' %}
@@ -72,7 +92,8 @@
             {% for sponsor in sponsors_list %}
                 <div class="col-lg-3 col-md-4">
                     <div class="class-item fade">
-                        <div class="ci-pic"><a href="{{ sponsor.sponsor_link }}">
+                        <div class="ci-pic-class">
+                            <a href="{{ sponsor.sponsor_link }}">
                             <img src="{{ sponsor.img.url }}" alt=""></a>
                         </div>
                     </div>

@@ -674,8 +674,8 @@ ol {
     min-width: 100%;
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
-    -webkit-transition: .8s ease-in-out;
-    transition: .8s ease-in-out;
+    -webkit-transition: 2.0s ease-in-out;
+    transition: 2.0s ease-in-out;
 }
 
 .class-item .ci-pic:hover {
