@@ -34,10 +34,13 @@
                 z-index:2000;
             }
             .nav-menu ul li a{
-                font-size : 18px;
+                font-size : 32px;
+                line-height: 0px;
             }
             .footer-section *{
                 color:white;
+                font-size: 24px;
+                line-height: 1.6em;
             }
             .slide-in{
                 position: relative;
@@ -47,6 +50,9 @@
             .margin-adder{
                 height:10vh;
                 width:100vw;
+            }
+            .to-social *{
+                font-size : 32px;
             }
             @keyframes slide-in{
                 0%{
@@ -73,7 +79,42 @@
             <div class="loader"></div>
         </div>
 
-        <div class="container-fluid" id="nav-bar" style="z-index: 2000;">
+        <div class="offcanvas-menu-overlay"></div>
+            <div class="offcanvas-menu-wrapper">
+                <div class="canvas-close">
+                    <i class="fa fa-close"></i>
+                </div>
+
+                <nav class="canvas-menu mobile-menu">
+                    <ul>
+                        <li><a href="../index">Home</a></li>
+                        <li><a href="../about">About Us</a></li>
+                        <li><a href="../team">Our Team</a></li>
+                        <li class="active"><a href="#">Subsystems</a>
+                            <ul class="dropdown">
+                                <li><a href="../aerodynamics">Aerodynamics</a></li>
+                                <li><a href="../vehicledynamics">Vehicle Dynamics</a></li>
+                                <li><a href="../powertrain">Powertrain</a></li>
+                                <li><a href="../electronics">Electronics</a></li>
+                                <li><a href="../media">Media</a></li>
+                                <li><a href="../marketing">Marketing</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../gallery">Gallery</a></li>
+                        <li><a href="../contact">Contact</a></li>
+                    </ul>
+
+                </nav>
+                <div id="mobile-menu-wrap"></div>
+                <div class="canvas-social">
+                    <a href="https://www.facebook.com/nitkracing"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/nitk-racing"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/channel/UCboCcz11TdW0tMa_5n-eiyA"><i class="fa fa-youtube-play"></i></a>
+                    <a href="https://www.instagram.com/nitkracing/"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+
+        <div class="container-fluid" id="nav-bar">
             <div class="row" style="display:flex; align-items: center;">
                 <div class="col-lg-3">
                     <!--div class="logo"-->
@@ -107,7 +148,6 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="top-option">
-
                         <div class="to-social">
                             <a href="https://www.facebook.com/nitkracing" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="https://www.linkedin.com/company/nitk-racing" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -119,7 +159,7 @@
                     </div>
                 </div>
             </div>
-            <div class="canvas-open">
+            <div class="canvas-open" style="z-index: 30;">
                 <i class="fa fa-bars"></i>
             </div>
         </div>
@@ -219,7 +259,7 @@
             $(".banner-text").hide()
             $("#banner-text-1").hide().fadeIn(2000, function() {})
         });
-
+        
     </script>
     {% block script %}
     {% endblock %}
