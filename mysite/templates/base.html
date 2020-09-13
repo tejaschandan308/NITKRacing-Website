@@ -43,10 +43,10 @@
     </head>
     <body style="background-color: black;">
         <div class="container-fluid" id="nav-bar" style="z-index: 2000;">
-            <div class="row">
+            <div class="row" style="display:flex; align-items: center;">
                 <div class="col-lg-3">
                     <!--div class="logo"-->
-                        <a class="navbar-brand" href="./index">
+                        <a class="navbar-brand" href="{% url 'mysite:index' %}">
                             <img src="{% static 'img/logo.png' %}" alt="">
                         </a>
                     <!---/div-->
@@ -126,7 +126,7 @@
                     <div class="col-md-3">
                         <div class="gt-text">
                             <i class="fa fa-map-marker"></i>
-                            <p><a target="__blank" href="https://www.google.com/search?rlz=1C1AVFC_enIN902IN902&output=search&q=National+Institute+of+Technology,+Karnataka&ludocid=7715023142948548083&lsig=AB86z5XL5WlPNBwBlxoicoh9ZbeY#">
+                            <p><a target="__blank" href="https://www.google.com/maps/dir//National+Institute+of+Technology,+Karnataka/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3ba35211b768ac8f:0x6b1144ac2d5dadf3?sa=X&ved=2ahUKEwiJx4SN1NTrAhXF8XMBHXhYADoQ9RcwGHoECBAQBA">
                                 National Institute of Technology<br> NH 66, Srinivasnagar, Surathkal<br> Mangalore
                                 Karnataka <br>
                                 575025</a></p>
