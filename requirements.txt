@@ -52,7 +52,7 @@ itsdangerous==1.1.0
 jdcal==1.4.1
 Jinja2==2.10.3
 jmespath==0.10.0
-kombu==4.6.11
+kombu==4.6.10
 lazy-object-proxy==1.4.3
 lxml==4.5.1
 MarkupPy==1.14

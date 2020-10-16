@@ -36,7 +36,7 @@ SECRET_KEY = 'l4utq!%_tyacmct=^-89ww5o9go=wt#caqvjo&87p7@x0eid^j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '10.14.0.14', 'nitkracing.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '10.14.0.42', 'racing.nitk.edu.in' 'nitkracing.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
