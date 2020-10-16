@@ -18,6 +18,9 @@
         <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
         <style>
+            html{
+                overflow-x: hidden;
+            }
             #nav-bar{
                 background-color: black;
             }
@@ -34,13 +37,10 @@
                 z-index:2000;
             }
             .nav-menu ul li a{
-                font-size : 32px;
-                line-height: 0px;
+                font-size : 18px;
             }
             .footer-section *{
                 color:white;
-                font-size: 24px;
-                line-height: 1.6em;
             }
             .slide-in{
                 position: relative;
@@ -50,9 +50,6 @@
             .margin-adder{
                 height:10vh;
                 width:100vw;
-            }
-            .to-social *{
-                font-size : 32px;
             }
             @keyframes slide-in{
                 0%{
