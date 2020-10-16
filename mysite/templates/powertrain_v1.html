@@ -1,29 +1,32 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
 {% block body %}
 
-<section class="blog-section spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 p-0">
-                <div class="blog-item">
-                    {% for blog in blog_list %}
-                        <div class="bi-text">
-                            <h5>{{ blog.title }}</h5>
-                            <ul>
-                                <li>{{ blog.author }}</li>
-                                <li>{{ blog.updated_on }}</li>
-                            </ul>
-                            <p>{{ blog.content }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
+{% if blog_list.count %}
+    <section class="blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 p-0">
+                    <div class="blog-item">
+                        {% for blog in blog_list %}
+                            <div class="bi-text">
+                                <h5>{{ blog.title }}</h5>
+                                <ul>
+                                    <li>{{ blog.author }}</li>
+                                    <li>{{ blog.updated_on }}</li>
+                                </ul>
+                                <p>{{ blog.content }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+{% endif %}
 <!-- ChoseUs Section End -->
 
 <!-- Classes Section Begin -->
@@ -32,8 +35,8 @@
 <!-- Gallery Section End -->
 <section class="gallery-section">
     <div class="section-title">
-        <span>A glimpse under the hood</span>
-        <h2>3D MODELS</h2>
+        <span style="font-size: 35px ;">A glimpse under the hood</span>
+        <h2 style="font-size: 33px;">3D MODELS</h2>
     </div>
     <div class="gallery">
         <div class="grid-sizer"></div>
@@ -55,7 +58,7 @@
             <div class="col-lg-12">
                 <div class="team-title">
                     <div class="section-title">
-                        <h2>MEET THE SQUAD</h2>
+                        <h2 style="font-size: 33px;">MEET THE SQUAD</h2>
                     </div>
                 </div>
             </div>
@@ -85,7 +88,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <span>meet the support squad</span>
+                    <span style='font-size: 35px;'>meet the support squad</span>
                     <h2>Our sponsors</h2>
                 </div>
             </div>
@@ -115,3 +118,4 @@
     </script>
 
 {% endblock %}
+

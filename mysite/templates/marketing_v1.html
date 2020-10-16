@@ -1,30 +1,32 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
 {% block body %}
-<section class="blog-section spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 p-0">
-                <div class="blog-item">
-                    {% for blog in blog_list %}
 
-                        <div class="bi-text">
-                            <h5>{{ blog.title }}</h5>
-                            <ul>
-                                <li>{{ blog.author }}</li>
-                                <li>{{ blog.updated_on }}</li>
-                            </ul>
-                            <p>{{ blog.content }}</p>
-                        </div>
+{% if blog_list.count %}
+    <section class="blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 p-0">
+                    <div class="blog-item">
+                        {% for blog in blog_list %}
+                            <div class="bi-text">
+                                <h5>{{ blog.title }}</h5>
+                                <ul>
+                                    <li>{{ blog.author }}</li>
+                                    <li>{{ blog.updated_on }}</li>
+                                </ul>
+                                <p>{{ blog.content }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
 
-                    {% endfor %}
                 </div>
-
             </div>
         </div>
-    </div>
-</section>
+    </section>
+{% endif %} 
 <!-- Teaam -->
 <section class="team-section spad">
     <div class="container">
